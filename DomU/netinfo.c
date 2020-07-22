@@ -10,6 +10,7 @@
 #include <syslog.h>
 #include <signal.h>
 #include <time.h>
+#include <pthread.h>
 #include <sys/stat.h>
 #include <sys/param.h>
 #include <sys/types.h>
