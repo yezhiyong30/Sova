@@ -5,6 +5,9 @@ Sova works on top of popular Linux underlying solutions including ACPI Hotplug, 
 
 Sova is developed based on Xen project (https://github.com/xen-project).
 
+# Quick Start
+Before running the program, you need to configure bonding for the network card of each VM, and set each SR-IOV VF as the primary network card of the bonding driver through active-backup way.
+
 # Contacts
 This implementation is a research prototype that shows the feasibility. It is NOT production quality code. The technical details will be published in academic papers. If you have any questions, please raise issues on Github or contact the authors below.
 
