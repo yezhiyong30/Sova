@@ -3,7 +3,7 @@ Sova is a software-defined dynamic scheduling framework that combines the advant
 
 Sova works on top of popular Linux underlying solutions including ACPI Hotplug, Bonding Diver, etc, and also exploits often-used virtualization solutions, including para-virtual I/O, SR-IOV, live migration, etc. At the physical machine level, Sova can self-adjusting switch between the para-virtual NIC and the SR-IOV VF for each VM by sensing its workload, which can greatly improve the network performance of network-intensive VMs. On the other hand, at the cluster level, Sova dynamically adjusts the load for each physical machine through live migration technology, so it is prevented that the network performance is reduced due to the excessive load of a physical machine. In addition, Sova also coordinated the optimization method between the physical machine and the cluster by leveraging a software-defined way to make it work better.
 
-Sova is developed based on Xen project (https://github.com/xen-project).
+Sova is developed based on Xen project (https://github.com/xen-project), and released with MIT license..
 
 # Quick Start
 Before running the program, you need to configure bonding for the NIC of each VM, and set each SR-IOV VF as the primary NIC of the bonding driver through active-backup way. If it is an HVM guest, you also need to configure a paravirtualized driver for xenstore data transfer (refer here: https://wiki.xen.org/wiki/Using_Xen_PV_Drivers_on_HVM_Guest). 
