@@ -10,7 +10,7 @@ Before running the program, you need to configure bonding for the NIC of each VM
 
 Xen needs to be recompiled, and replace the xl_vmcontrol.c file in the Dom0/scheduler folder and the xenbaked.c and xenmon.py files in the Dom0/xenmon folder.
 
-The netinfo (in DomU folder, compile with libpthread and libxenstore libraries) runs as a daemon in domU, collects the network data of the VM and sends it to Dom0 through xenstore. The scheduler runs in Dom0, and exploits the network data obtained from DomU by xenstore and the I/O and cpu data obtained from XenMon to dynamically schedule the SR-IOV VF of the VM, and trigger and execute live migration.
+The netinfo (in DomU folder, compile with libpthread and libxenstore libraries) runs as a daemon in domU, collects the network data of the VM and sends it to dom0 through xenstore. The scheduler runs in dom0, and exploits the network data obtained from domU by xenstore and the I/O and cpu data obtained from XenMon to dynamically schedule the SR-IOV VF of the VM, and trigger and execute live migration.
 
 # Contacts
 This implementation is a research prototype that shows the feasibility. It is NOT production quality code. The technical details will be published in academic papers. If you have any questions, please raise issues on Github or contact the authors below.
